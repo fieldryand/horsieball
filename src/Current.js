@@ -10,6 +10,7 @@ class Current extends Component {
   getLastUpdated(){
     let lastUpdated;
     axios.get('/last_updated').then(response => {lastUpdated = response.data});
+    console.log(lastUpdated);
     return lastUpdated;
   }
   getLeagues() {

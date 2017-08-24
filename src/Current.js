@@ -11,8 +11,9 @@ class Current extends Component {
     };
   }
   componentWillMount(){
+    var self = this;
     axios.get('/last_updated').then(function(result) {
-      this.setState({
+      self.setState({
             lastUpdated: result.data
           });
     })

@@ -7,10 +7,7 @@ class Current extends Component {
   componentWillMount() {
   }
   getLastUpdated(){
-    let lastUpdated;
-    axios.get('/last_updated').then(response => {console.log(response)});
-    console.log(lastUpdated);
-    return <div>{lastUpdated}</div>;
+    return axios.get('/last_updated');
   }
   getLeagues() {
     const leagues = [];
@@ -22,6 +19,7 @@ class Current extends Component {
     }
     return (
       <div>
+        <div>{this.getLastUpdated()}</div>
         <div>Total matches: {totalMatches}</div>
         <div>{leagues}</div>
       </div>
@@ -31,7 +29,6 @@ class Current extends Component {
   render() {
     return (
       <div className="Current">
-        {this.getLastUpdated()}
         {this.getLeagues()}
       </div>
     );

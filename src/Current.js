@@ -8,7 +8,7 @@ class Current extends Component {
   }
   getLastUpdated(){
     let lastUpdated;
-    axios.get('/last_updated').then(response => {this.lastUpdated = response.data});
+    axios.get('/last_updated').then(response => {console.log(response)});
     console.log(lastUpdated);
     return <div>{lastUpdated}</div>;
   }

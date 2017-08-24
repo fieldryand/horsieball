@@ -5,13 +5,12 @@ import axios from 'axios';
 
 class Current extends Component {
   componentWillMount() {
-    console.log(forecast);
   }
   getLastUpdated(){
     let lastUpdated;
-    axios.get('/last_updated').then(response => {lastUpdated = response.data});
+    axios.get('/last_updated').then(response => {this.lastUpdated = response.data});
     console.log(lastUpdated);
-    return lastUpdated;
+    return <div>{lastUpdated}</div>;
   }
   getLeagues() {
     const leagues = [];

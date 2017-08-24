@@ -1,0 +1,189 @@
+.App {
+  max-width: 95%;
+  margin: 0 auto;
+  font-family: monospace;
+}
+
+@media (min-width: 70em) {
+  .App {
+    max-width: 70em;
+  }
+}
+
+.header {
+  text-align: center;
+  padding: 4em;
+}
+
+.header-soccerball {
+  max-width: 8em;
+  animation: ball-spin infinite 20s linear;
+}
+
+@keyframes ball-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.league {
+  margin-top: 4em;
+}
+
+.league-name {
+  padding: 1em 0;;
+}
+
+.matchRow {
+  display: flex;
+  padding: .5em;
+}
+
+.matchRow:nth-of-type(even) {
+    background: #f9f9f9;
+}
+
+.matchCell {
+  margin-left: 3em;
+  width:13%;
+  display: flex;
+  align-items: center;
+}
+
+.matchCell-large {
+  margin-left: 3em;
+  width:18%;
+  display: flex;
+  align-items: center;
+  word-break: break-word;
+}
+
+.prob-value {
+  min-width: 3em;
+}
+
+.prob-indicator-1,
+.prob-indicator-2,
+.prob-indicator-3,
+.prob-indicator-4,
+.prob-indicator-5,
+.prob-indicator-6,
+.prob-indicator-7,
+.prob-indicator-8,
+.prob-indicator-9,
+.prob-indicator-10,
+.prob-indicator-11,
+.prob-indicator-12,
+.prob-indicator-13,
+.prob-indicator-14,
+.prob-indicator-15,
+.prob-indicator-16,
+.prob-indicator-17,
+.prob-indicator-18,
+.prob-indicator-19 {
+  background-color: #e0eddc;
+  width:1em;
+  height:1em;
+  border-radius: 50%;
+}
+.prob-indicator-20,
+.prob-indicator-21,
+.prob-indicator-22,
+.prob-indicator-23,
+.prob-indicator-24,
+.prob-indicator-25,
+.prob-indicator-26,
+.prob-indicator-27,
+.prob-indicator-28,
+.prob-indicator-29,
+.prob-indicator-30,
+.prob-indicator-31,
+.prob-indicator-32,
+.prob-indicator-33,
+.prob-indicator-34,
+.prob-indicator-35,
+.prob-indicator-36,
+.prob-indicator-37,
+.prob-indicator-38,
+.prob-indicator-39,
+.prob-indicator-40 {
+   background-color: #ceedc4;
+   width:1em;
+   height:1em;
+   border-radius: 50%;
+}
+.prob-indicator-41,
+.prob-indicator-42,
+.prob-indicator-43,
+.prob-indicator-44,
+.prob-indicator-45,
+.prob-indicator-46,
+.prob-indicator-47,
+.prob-indicator-48,
+.prob-indicator-49,
+.prob-indicator-50,
+.prob-indicator-51,
+.prob-indicator-52,
+.prob-indicator-53,
+.prob-indicator-54,
+.prob-indicator-55,
+.prob-indicator-56,
+.prob-indicator-57,
+.prob-indicator-58,
+.prob-indicator-59,
+.prob-indicator-60 {
+   background-color: #b1e2a1;
+   width:1em;
+   height:1em;
+   border-radius: 50%;
+}
+.prob-indicator-61,
+.prob-indicator-62,
+.prob-indicator-63,
+.prob-indicator-64,
+.prob-indicator-65,
+.prob-indicator-66,
+.prob-indicator-67,
+.prob-indicator-68,
+.prob-indicator-69,
+.prob-indicator-70,
+.prob-indicator-71,
+.prob-indicator-72,
+.prob-indicator-73,
+.prob-indicator-74,
+.prob-indicator-75,
+.prob-indicator-76,
+.prob-indicator-77,
+.prob-indicator-78,
+.prob-indicator-79,
+.prob-indicator-80 {
+ background-color: #99dd82;
+ width:1em;
+ height:1em;
+ border-radius: 50%;
+}
+.prob-indicator-81,
+.prob-indicator-82,
+.prob-indicator-83,
+.prob-indicator-84,
+.prob-indicator-85,
+.prob-indicator-86,
+.prob-indicator-87,
+.prob-indicator-88,
+.prob-indicator-89,
+.prob-indicator-90,
+.prob-indicator-91,
+.prob-indicator-92,
+.prob-indicator-93,
+.prob-indicator-94,
+.prob-indicator-95,
+.prob-indicator-96,
+.prob-indicator-97,
+.prob-indicator-98,
+.prob-indicator-99,
+.prob-indicator-100 {
+ background-color: #75c659;
+ width:15%;
+ width:1em;
+ height:1em;
+ border-radius: 50%;
+}

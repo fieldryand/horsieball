@@ -7,7 +7,8 @@ class Current extends Component {
   constructor() {
     super();
     this.state = {
-      lastUpdated: []
+      lastUpdated: [],
+      forecast: {}
     };
   }
   componentWillMount(){
@@ -17,8 +18,14 @@ class Current extends Component {
             lastUpdated: result.data
           });
     })
+    axios.get('/forecast').then(function(result) {
+      self.setState({
+            forecast: result.data
+          });
+    })
   }
   getLeagues() {
+    const forecast = this.state.forecast;
     const leagues = [];
     let totalMatches = 0;
     for (var league in forecast) {
@@ -37,7 +44,7 @@ class Current extends Component {
   render() {
     return (
       <div className="Current">
-        {this.state.lastUpdated}
+        Last updated: {this.state.lastUpdated}
         {this.getLeagues()}
       </div>
     );

@@ -4,15 +4,17 @@ import League from './League.js'
 import axios from 'axios';
 
 class Current extends Component {
-  componentWillMount() {
+  getInitialState: function() {
+    return {
+      lastUpdated: []
+    }
   }
-  getLastUpdated(){
-    let lastUpdated;
+  componentWillMount(){
     axios.get('/last_updated').then(function(result) {
-    lastUpdated = result;
-  });
-    console.log(lastUpdated);
-    return <div>{lastUpdated}</div>;
+      _this.setState({
+            lastUpdated: result.data
+          });
+    })
   }
   getLeagues() {
     const leagues = [];
@@ -33,7 +35,7 @@ class Current extends Component {
   render() {
     return (
       <div className="Current">
-        {this.getLastUpdated()}
+        {this.state.lastUpdated}
         {this.getLeagues()}
       </div>
     );
